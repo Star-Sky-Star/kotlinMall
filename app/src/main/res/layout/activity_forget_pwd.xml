@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.ForgetPwdActivity">
+
+    <com.android.kotlinmall.widgets.HeaderBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="@string/forgetPwdTitle"
+    />
+
+
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/mPhoneForget"
+              android:layout_height="wrap_content"
+              android:hint="@string/editPhoneHint"
+              android:layout_margin="@dimen/common_margin"
+              android:background="@null"
+              android:inputType="phone"
+    />
+    <EditText android:layout_width="match_parent"
+              android:hint="@string/editVerifyCodeHint"
+              android:background="@null"
+              android:layout_margin="@dimen/common_margin"
+              android:id="@+id/mVerifyCodeForget"
+              android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/mNextBtn"
+            style="@style/FullBtnStyle"
+            android:text="@string/commonNext"/>
+</LinearLayout>

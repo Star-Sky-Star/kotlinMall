@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UserCenter</string>
+    <string name="verifyCodeString">获取验证码</string>
+    <string name="editPhoneHint">请输入手机号</string>
+    <string name="editVerifyCodeHint">请输入验证码</string>
+    <string name="editPassWordHint">请输入密码</string>
+    <string name="editPassWordSureHint">请确认密码</string>
+    <string name="btnRegisterText">注册</string>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">KotlinMall</string>
+    <string name="verifyCodeString">获取验证码</string>
+    <string name="editPhoneHint">请输入手机号</string>
+    <string name="editVerifyCodeHint">请输入验证码</string>
+    <string name="editPassWordHint">请输入密码</string>
+    <string name="editPassWordSureHint">请确认密码</string>
+    <string name="btnRegisterText">注册</string>
+    <string name="jipushMasterSecret">88f47be0dc394a9aebf08a94</string>
+    <string name="jiPushAppkey">d531b73aa396e7081f3328d7</string>
+    <string name="networkUnuse">网络不可用</string>
+    <string name="loginBtnText">登录</string>
+    <string name="forgetPwd">忘记密码?</string>
+    <string name="resetPwd">重置密码</string>
+    <string name="commonNext">下一步</string>
+    <string name="forgetPwdTitle">忘记密码</string>
+    <string name="resetPwdSuccess">密码重置成功</string>
+    <string name="pwdNotEquals">两次密码输入不一致,请重新输入</string>
+    <string name="common_save">保存</string>
+</resources>
