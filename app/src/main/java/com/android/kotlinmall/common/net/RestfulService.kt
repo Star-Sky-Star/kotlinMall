@@ -2,6 +2,7 @@ package com.android.baselibrary.common
 
 import com.android.kotlinmall.AppContext
 import com.android.kotlinmall.common.net.AcceptInterceptor
+import com.android.kotlinmall.constant.BaseConstant
 import com.android.kotlinmall.ext.ensureDir
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -24,9 +25,7 @@ import java.util.concurrent.TimeUnit
  **/
 
 
-private const val BASE_URL = "http://192.168.1.51:8080/"
-
-private const val TIME_CONNECT = 60L
+private const val TIME_CONNECT = 10L
 //是否强制使用网络
 const val FORCE_NETWORK = "forceNetwork"
 
@@ -51,7 +50,7 @@ val retrofit: Retrofit by lazy {
                 .addInterceptor(AcceptInterceptor())
                 .build()
         )
-        .baseUrl(BASE_URL)
+        .baseUrl(BaseConstant.BASE_USRL)
         .build()
 }
 

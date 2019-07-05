@@ -10,17 +10,19 @@
         tools:context=".ui.activity.MainActivity">
 
 
-    <FrameLayout android:layout_width="match_parent"
-                 android:layout_height="0dp"
-                 android:id="@+id/mContainer"
-                 android:layout_weight="1"/>
+    <com.android.kotlinmall.widgets.NoScrollViewPager android:layout_width="match_parent"
+                                                      android:layout_height="0dp"
+                                                      android:id="@+id/mViewPager"
+                                                      android:layout_weight="1"/>
     <android.support.design.widget.BottomNavigationView
             android:layout_width="match_parent"
             app:menu="@menu/navigation"
             android:id="@+id/mNavigationMain"
             app:itemIconTint="@null"
             app:itemBackground="@color/common_white"
-            app:itemTextColor="@drawable/bottom_navigation_item_selector"
+            app:itemTextAppearanceActive="@style/bottom_tab_title_active"
+            app:itemTextAppearanceInactive="@style/bottom_tab_title_inactive"
             android:layout_height="wrap_content"
+            app:labelVisibilityMode="labeled"
     />
 </LinearLayout>

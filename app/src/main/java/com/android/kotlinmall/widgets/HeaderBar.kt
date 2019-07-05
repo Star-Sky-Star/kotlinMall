@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.FrameLayout
 import com.android.kotlinmall.R
 import kotlinx.android.synthetic.main.layout_header_bar.view.*
+import org.jetbrains.anko.dip
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
 /**
@@ -43,6 +44,7 @@ class HeaderBar @JvmOverloads constructor(
 
         View.inflate(context, R.layout.layout_header_bar, this)
         mLeftIv.visibility = if (isShowBack) View.VISIBLE else View.GONE
+
         titleText?.let {
             mTitleTv.text = it
         }

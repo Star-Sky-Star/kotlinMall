@@ -115,6 +115,7 @@ class UserInfoActivity : BaseActivity<UserInfoPresenter>(), TakePhoto.TakeResult
 
     fun editUserSuccess() {
         toast("修改成功")
+        finish()
     }
 
     fun editUserError() {

@@ -27,6 +27,25 @@ object UserRepority {
 
     private var userJson by pref("")
 
+
+    /*
+    如果已经登录，进行传入的方法处理
+    如果没有登录，进入登录界面
+ */
+    fun afterLogin(method:()->Unit){
+        if (isLogined()){
+            method()
+        }else{
+
+        }
+    }
+    /*
+    顶级函数，判断是否登录
+ */
+    fun isLogined():Boolean{
+        return userId.isNotEmpty()
+    }
+
     var currentUser: UserInfo? = null
         get() {
             if (field == null && userJson.isNotEmpty()) {
@@ -63,6 +82,12 @@ object UserRepority {
      */
     fun editUser( userName: String, userIcon: String, gender: String, sign: String): Observable<UserInfo> {
         return UserService.editUser(EditUserReq( userName, userIcon, gender, sign)).convert()
+    }
+    /**
+     * 获取用户信息
+     */
+    fun getUserInfo(): Observable<UserInfo> {
+        return UserService.getUserInfo().convert()
     }
 
 

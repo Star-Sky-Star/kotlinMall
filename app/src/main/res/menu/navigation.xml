@@ -3,17 +3,17 @@
 
     <item android:id="@+id/navigationHome"
           android:icon="@drawable/selector_main_table_mall"
-          android:title="Home"/>
+          android:title="@string/main_index_title"/>
     <item android:id="@+id/navigationCategories"
           android:icon="@drawable/selector_main_table_categories"
-          android:title="Home"/>
+          android:title="@string/main_category_title"/>
     <item android:id="@+id/navigationCart"
           android:icon="@drawable/selector_main_table_cart"
-          android:title="Home"/>
+          android:title="@string/main_cart_title"/>
     <item android:id="@+id/navigationMessage"
           android:icon="@drawable/selector_main_table_message"
-          android:title="Home"/>
+          android:title="@string/main_message_title"/>
     <item android:id="@+id/navigationOwner"
           android:icon="@drawable/selector_main_table_mine"
-          android:title="Home"/>
+          android:title="@string/main_user_title"/>
 </menu>

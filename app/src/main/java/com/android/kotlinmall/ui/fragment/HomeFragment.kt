@@ -1,14 +1,15 @@
 package com.android.kotlinmall.ui.fragment
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.PagerSnapHelper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.android.kotlinmall.R
-import com.android.kotlinmall.constant.HOME_BANNER_FOUR
-import com.android.kotlinmall.constant.HOME_BANNER_ONE
-import com.android.kotlinmall.constant.HOME_BANNER_THREE
-import com.android.kotlinmall.constant.HOME_BANNER_TWO
+import com.android.kotlinmall.adapter.HomeDiscountAdapter
+import com.android.kotlinmall.adapter.HomeGalleryAdapter
+import com.android.kotlinmall.constant.*
 import com.android.kotlinmall.presenter.HomeFragmentPresenter
 import com.android.kotlinmall.widgets.BannerImageLoader
 import com.android.mvp.impl.BaseFragment
@@ -29,7 +30,7 @@ class HomeFragment : BaseFragment<HomeFragmentPresenter>() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_index, container,false )
+        return inflater.inflate(R.layout.fragment_index, container, false)
     }
 
 
@@ -37,6 +38,28 @@ class HomeFragment : BaseFragment<HomeFragmentPresenter>() {
         super.onViewCreated(view, savedInstanceState)
         initBanner()
         initNews()
+        initDisCount()
+        initmGallery()
+    }
+
+    private fun initDisCount() {
+        mDisCountRecycler.layoutManager= LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        mDisCountRecycler.adapter=HomeDiscountAdapter( listOf(
+            HOME_DISCOUNT_ONE, HOME_DISCOUNT_TWO, HOME_DISCOUNT_THREE, HOME_DISCOUNT_FOUR,
+            HOME_DISCOUNT_FIVE
+        ))
+    }
+
+    private fun initmGallery() {
+        mGallery.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        mGallery.adapter = HomeGalleryAdapter(
+            listOf(
+                HOME_TOPIC_ONE, HOME_TOPIC_TWO, HOME_TOPIC_THREE, HOME_TOPIC_FOUR,
+                HOME_TOPIC_FIVE
+            )
+        )
+        PagerSnapHelper().attachToRecyclerView(mGallery)
+
     }
 
     private fun initBanner() {
@@ -52,6 +75,6 @@ class HomeFragment : BaseFragment<HomeFragmentPresenter>() {
 
 
     private fun initNews() {
-        mNewsFlipper.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场", "新用户立领1000元优惠券","杭冬腊月的，来个冰淇淋吧"))
+        mNewsFlipper.setData(arrayOf("夏日炎炎，第一波福利还有30秒到达战场", "新用户立领1000元优惠券", "杭冬腊月的，来个冰淇淋吧"))
     }
 }

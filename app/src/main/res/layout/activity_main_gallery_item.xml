@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_margin="@dimen/common_margin_middle"
+                                    android:layout_height="wrap_content"
+                                    android:elevation="2dp"
+                                    app:cardBackgroundColor="@color/common_white">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+        <ImageView android:layout_width="match_parent" android:layout_height="160dp"
+                   android:scaleType="centerCrop"
+                   android:id="@+id/mTopicIv"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:textColor="@color/text_light_dark"
+                  android:text="傻白甜"
+                  android:layout_margin="@dimen/common_margin_small"
+        />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:textColor="@color/text_dark"
+                  android:layout_margin="@dimen/common_margin_small"
+                  android:text="又贫又烦又时尚"/>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

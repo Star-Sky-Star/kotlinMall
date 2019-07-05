@@ -2,17 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:background="@color/common_blue"
+              android:background="@color/common_white"
               android:layout_height="match_parent">
     <com.youth.banner.Banner
             android:id="@+id/mHomeBanner"
             android:layout_width="match_parent"
             android:layout_height="200dp"/>
-    <com.android.kotlinmall.widgets.NewsFlipperView android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginLeft="@dimen/common_margin_middle"
-                                                    android:layout_marginRight="@dimen/common_margin_middle"
-                                                    android:layout_marginTop="@dimen/common_margin_small"
-                                                    android:layout_marginBottom="@dimen/common_margin_small"
-                                                    android:id="@+id/mNewsFlipper"/>
+    <com.android.kotlinmall.widgets.NewsFlipperView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin_middle"
+            android:layout_marginRight="@dimen/common_margin_middle"
+            android:layout_marginTop="@dimen/common_margin_small"
+            android:layout_marginBottom="@dimen/common_margin_small"
+            android:id="@+id/mNewsFlipper"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mDisCountRecycler"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_margin_middle"
+            android:layout_marginBottom="@dimen/common_margin_middle"
+            android:id="@+id/mGallery"/>
+
 </LinearLayout>

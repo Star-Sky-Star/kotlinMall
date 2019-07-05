@@ -30,6 +30,8 @@ abstract class BaseFragment<out P : BasePresenter<BaseFragment<P>>> : IMvpView<P
         presenter.view = this
     }
 
+
+
     private fun createPresenterKt(): P {
         sequence {
             var thisClass: KClass<*> = this@BaseFragment::class

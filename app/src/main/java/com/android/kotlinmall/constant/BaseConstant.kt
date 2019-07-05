@@ -12,5 +12,6 @@ package com.android.kotlinmall.constant
 class BaseConstant {
     companion object {
         const val IMAGE_SERVER_ADDRESS = "http://osea2fxp7.bkt.clouddn.com/"
+        const val  BASE_USRL="http://192.168.1.51:8080/"
     }
 }

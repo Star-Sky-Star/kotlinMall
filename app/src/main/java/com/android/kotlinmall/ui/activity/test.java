@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import com.android.kotlinmall.R;
 
 /**
@@ -27,5 +28,7 @@ public class test extends AppCompatActivity {
 getSupportFragmentManager().beginTransaction();
 
 getFragmentManager().beginTransaction();
+
+new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
     }
 }

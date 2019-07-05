@@ -86,5 +86,7 @@ dependencies {
 
     implementation 'com.github.shts:TriangleLabelView:1.1.2'
 
+    implementation 'com.github.jdsjlzx:LRecyclerView:1.5.4.3'
+
 
 }

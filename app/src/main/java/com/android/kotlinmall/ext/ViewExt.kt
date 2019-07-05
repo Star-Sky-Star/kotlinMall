@@ -2,8 +2,11 @@ package com.android.kotlinmall.ext
 
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
+import com.android.kotlinmall.utils.GlideUtils
 
 /**
  ** Create by 对方已经拉黑你
@@ -26,7 +29,20 @@ fun Button.enable(et: EditText, method: () -> Boolean){
     })
 }
 
+/*
+    扩展点击事件
+ */
+fun View.onClick(listener: View.OnClickListener): View {
+    setOnClickListener(listener)
+    return this
+}
 
+/*
+    ImageView加载网络图片
+ */
+fun ImageView.loadUrl(url: String) {
+    GlideUtils.loadUrlImage(context, url, this)
+}
 
 open class DefaultTextWatcher:TextWatcher{
     override fun afterTextChanged(s: Editable?) {

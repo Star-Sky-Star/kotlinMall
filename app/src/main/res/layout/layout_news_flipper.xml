@@ -3,7 +3,8 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
 android:background="@drawable/corner_news_bg"
-              android:layout_height="45dp">
+              android:layout_height="50dp"
+android:padding="@dimen/common_margin_small">
 
     <ImageView android:layout_width="wrap_content"
                android:layout_height="match_parent"

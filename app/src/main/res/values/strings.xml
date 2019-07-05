@@ -17,4 +17,10 @@
     <string name="resetPwdSuccess">密码重置成功</string>
     <string name="pwdNotEquals">两次密码输入不一致,请重新输入</string>
     <string name="common_save">保存</string>
+    <string name="main_index_title">首页</string>
+    <string name="main_category_title">分类</string>
+    <string name="main_cart_title">购物车</string>
+    <string name="main_message_title">消息</string>
+    <string name="main_user_title">我的</string>
+    <string name="un_login_text">登录/注册</string>
 </resources>
